@@ -227,9 +227,10 @@
     /* ===== Nút chỉnh màu giao diện (góc phải dưới) ===== */
     body, .side, .chinh-app, .mock, .nav { transition: background-color .35s ease, color .35s ease; }
     .soan button { color: var(--on-blue); }
-    .theme-box { position: fixed; right: 22px; bottom: 22px; z-index: 90; }
+    .theme-box { position: fixed; right: 16px; top: 14px; z-index: 90; }
+    .nav .wrap { padding-right: 72px; }
     .theme-fab {
-      position: relative; width: 54px; height: 54px; border-radius: 50%; background: var(--panel); color: var(--blue);
+      position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--panel); color: var(--blue);
       display: grid; place-items: center;
       box-shadow: 0 10px 26px -10px rgba(var(--blue-rgb), .65), 0 0 0 1px var(--line);
       transition: transform .3s cubic-bezier(.3, 1.5, .5, 1), box-shadow .3s;
@@ -243,14 +244,14 @@
     .theme-fab:hover, .theme-fab.dang-mo { transform: scale(1.08); }
     .theme-fab:hover::before, .theme-fab.dang-mo::before { animation-play-state: running; }
     .theme-fab:active { transform: scale(.95); }
-    .theme-fab svg { width: 26px; height: 26px; transition: transform .4s cubic-bezier(.3, 1.5, .5, 1); }
+    .theme-fab svg { width: 20px; height: 20px; transition: transform .4s cubic-bezier(.3, 1.5, .5, 1); }
     .theme-fab.dang-mo svg { transform: rotate(35deg); }
     @keyframes quay { to { transform: rotate(360deg); } }
 
     .theme-panel {
-      position: absolute; right: 0; bottom: 68px; width: 248px; padding: 16px; border-radius: 16px; background: var(--panel);
+      position: absolute; right: 0; top: 52px; width: 248px; padding: 16px; border-radius: 16px; background: var(--panel);
       box-shadow: 0 24px 50px -18px rgba(15, 23, 42, .35), 0 0 0 1px var(--line);
-      opacity: 0; visibility: hidden; transform: translateY(10px) scale(.97); transform-origin: bottom right;
+      opacity: 0; visibility: hidden; transform: translateY(-10px) scale(.97); transform-origin: top right;
       transition: opacity .25s ease, transform .25s ease, visibility 0s .25s, background-color .35s ease;
     }
     .theme-panel.mo { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
@@ -284,10 +285,11 @@
     [data-che="toi"] .tn.loi { background: #3a1517; color: #fda4a4; border-color: #6b2226; }
 
     @media (max-width: 860px) {
-      .theme-box { right: 14px; bottom: 84px; }
-      .theme-fab { width: 46px; height: 46px; }
-      .theme-fab svg { width: 22px; height: 22px; }
-      .theme-panel { bottom: 58px; }
+      .theme-box { right: 12px; top: 12px; }
+      .theme-fab { width: 36px; height: 36px; }
+      .theme-fab svg { width: 18px; height: 18px; }
+      .theme-panel { top: 46px; }
+      .nav .wrap { padding-right: 60px; }
     }
 
     /* Người dùng tắt hiệu ứng chuyển động trong hệ điều hành */
